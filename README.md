@@ -49,3 +49,53 @@ Total costs for a Twisted Listen boards:
 _Note that these tables don't include shipping charges._
 
 Production files could be found in `/hardware/X/production`.
+
+## GPIO Pins Mapping
+| GPIO | Strap |    ADC   | HWSPI | Remark                                              |      Exposed      | On Twisted        |
+|:----:|:-----:|:--------:|:-----:|-----------------------------------------------------|:-----------------:|-------------------|
+|   0  |  Yes  |          |       | Pull LOW to Enter BOOT                              |         No        | Boot Button       |
+|   1  |   No  | ADC1 CH0 |       |                                                     |        Yes        | Expansion Header  |
+|   2  |   No  | ADC1 CH1 |       |                                                     |        Yes        | Expansion Header  |
+|   3  |  Yes  | ADC1 CH2 |       | Pull LOW to Use An External Debugger Instead of USB |        Yes        | Expansion Header  |
+|   4  |   No  | ADC1 CH3 |       |                                                     |        Yes        | Expansion Header  |
+|   5  |   No  | ADC1 CH4 |       |                                                     |        Yes        | Expansion Header  |
+|   6  |   No  | ADC1 CH5 |       |                                                     |        Yes        | Expansion Header  |
+|   7  |   No  | ADC1 CH6 |       |                                                     |        Yes        | Expansion Header  |
+|   8  |   No  | ADC1 CH7 |       |                                                     |        Yes        | Expansion Header  |
+|   9  |   No  | ADC1 CH8 |  Hold |                                                     |        Yes        | Expansion Header  |
+|  10  |   No  | ADC1 CH9 |   CS  |                                                     |        Yes        | Expansion Header  |
+|  11  |   No  | ADC2 CH0 |  MOSI |                                                     |        Yes        | Expansion Header  |
+|  12  |   No  | ADC2 CH1 |  SCK  |                                                     |        Yes        | Expansion Header  |
+|  13  |   No  | ADC2 CH2 |  MISO |                                                     |        Yes        | Expansion Header  |
+|  14  |   No  | ADC2 CH3 |   WP  |                                                     |        Yes        | Expansion Header  |
+|  15  |   No  | ADC2 CH4 |       |                                                     |        Yes        | Expansion Header  |
+|  16  |   No  | ADC2 CH5 |       |                                                     |        Yes        | Expansion Header  |
+|  17  |   No  | ADC2 CH6 |       |                                                     |        Yes        | Expansion Header  |
+|  18  |   No  | ADC2 CH7 |       |                                                     |         No        | Keypad: INT       |
+|  19  |  Yes  | ADC2 CH8 |       | USB D-                                              |        Yes        | USB Port          |
+|  20  |  Yes  | ADC2 CH9 |       | USB D+                                              |        Yes        | USB Port          |
+|  21  |   No  |          |       |                                                     |         No        | Neopixel: DIN     |
+|  26  |  Yes  |          |       | Used for QSPI Flash/PSRAM                           |         No        | Unused            |
+|  27  |  Yes  |          |       | Used for QSPI Flash/PSRAM                           |         No        | Unused            |
+|  28  |  Yes  |          |       | Used for QSPI Flash/PSRAM                           |         No        | Unused            |
+|  29  |  Yes  |          |       | Used for QSPI Flash/PSRAM                           |         No        | Unused            |
+|  30  |  Yes  |          |       | Used for QSPI Flash/PSRAM                           |         No        | Unused            |
+|  31  |  Yes  |          |       | Used for QSPI Flash/PSRAM                           |         No        | Unused            |
+|  32  |  Yes  |          |       | Used for QSPI Flash/PSRAM                           |         No        | Unused            |
+|  33  | Maybe |          |       | Straps for Chips w/ Octal-SPI PSRAM                 |         No        | LCD: RST          |
+|  34  | Maybe |          |       | Straps for Chips w/ Octal-SPI PSRAM                 |         No        | LCD: SCK          |
+|  35  | Maybe |          |       | Straps for Chips w/ Octal-SPI PSRAM                 |         No        | LCD: CS           |
+|  36  | Maybe |          |       | Straps for Chips w/ Octal-SPI PSRAM                 |         No        | LCD: MOSI         |
+|  37  | Maybe |          |       | Straps for Chips w/ Octal-SPI PSRAM                 |         No        | LCD: BKL          |
+|  38  |   No  |          |       |                                                     |         No        | Unused            |
+|  39  |   No  |          |       |                                                     |         No        | Keypad: RST       |
+|  40  |   No  |          |       |                                                     |         No        | Unused            |
+|  41  |   No  |          |       |                                                     | Through Testpoint | Internal I2C: SDA |
+|  42  |   No  |          |       |                                                     | Through Testpoint | Internal I2C: SDA |
+|  43  |   No  |          |       | Default UART: TX                                    | Through Testpoint | Unused            |
+|  44  |   No  |          |       | Default UART: RX                                    | Through Testpoint | Unused            |
+|  45  |  Yes  |          |       |                                                     |         No        | Unused            |
+|  46  |  Yes  |          |       |                                                     |         No        | Unused            |
+|  47  |   No  |          |       |                                                     |         No        | LCD: DC           |
+|  48  |   No  |          |       |                                                     |         No        | BMS: INT          |
+
